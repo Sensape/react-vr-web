@@ -182,7 +182,9 @@ export default class VRInstance {
     this.player.render(this.scene);
 
     if (this._looping) {
-      this.player.requestAnimationFrame(this._frame);
+      setTimeout(() => {
+        this.player.requestAnimationFrame(this._frame);
+      }, 15);
     }
   }
 
